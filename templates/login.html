@@ -1,7 +1,31 @@
-{% extends "base.html" html %}
+{% extends "base.html"  %}
 
 {% block content %}
 
-
+<head>
+    <title>Login</title>
+    <style>
+        .error {
+            color: crimson
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <br>
+    <p>New? Click <a href="/signup">here</a> to make an account!</p>
+    <form action="/login" method="POST">
+        <p><label for="Username">Username
+            <input id="Username" name="username" type="text" >
+            <span class="error">{{incorrect_info}}</span>
+        </label></p>
+        <p><lable for="Password">Password
+            <input id="Password" name="password" type="password" >
+            <span class="error">{{incorrect_info}}</span>
+        </lable></p>
+        <section type="submission">
+            <input id="Submit" name="submit" type="submit">
+        </section>
+    </form>
 
 {% endblock %}

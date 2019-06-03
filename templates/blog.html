@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Build a Blog!</h1>
+
+{% if entries|length == 0 %}
+<p>No posts yet</p>
+{% else %}
+
+    {% for entry in entries %}
+
+    <div class="comment">
+        <a href = "/blog?boomstick={{entry.id}}" }><h1>{{entry.title}}</h1></a>
+    
+        <br>
+        <p>{{entry.body}}</p>
+        <p>Written by <a href="/blog?seahorse={{entry.user_id}}">{{entry.user.username}}</a></p>
+    </div>
+
+    {% endfor %}
+
+{% endif %}
+{% endblock %}

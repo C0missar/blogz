@@ -1,4 +1,4 @@
-{% extends "base.html" html %}
+{% extends "base.html"  %}
 
 {% block content %}
 
@@ -18,6 +18,7 @@
         <p><label for="Username">Username
             <input id="Username" name="username" type="text" >
             <span class="error">{{bad_username}}</span>
+            <span class="error">{{other_username}}</span>
         </label></p>
         <p><lable for="Password">Password
             <input id="Password" name="password" type="password" >
@@ -26,10 +27,6 @@
         <p><label for="Verify">Verify Password
             <input id="Verify" name="verify" type="password">
             <span class="error">{{mismatch}}</span>
-        </label></p>
-        <p><label for="Email">Email (optional)
-            <input id="Email" name="email" type="text">
-            <span class="error">{{bad_email}}</span>
         </label></p>
         <section type="submission">
             <input id="Submit" name="submit" type="submit">
